@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "180080696417",
+    "project_id": "booksstore-4b1ee",
+    "storage_bucket": "booksstore-4b1ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180080696417:android:ca2fd544d44bb5cfb35e20",
+        "android_client_info": {
+          "package_name": "com.firatsakar.booksstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180080696417-3efvlvgccis6s957ai01j8419q7an66p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrizgMkMNXE_j26PXGvbnlHw4AHq0qFqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180080696417-3efvlvgccis6s957ai01j8419q7an66p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

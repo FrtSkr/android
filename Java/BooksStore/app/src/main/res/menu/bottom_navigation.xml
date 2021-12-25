@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:id="@+id/books"
+        android:title="@string/kitaplar"
+        android:icon="@drawable/ic_books"/>
+
+    <item android:id="@+id/basket"
+        android:title="@string/sepet"
+        android:icon="@drawable/ic_basket"/>
+
+    <item android:id="@+id/userSetting"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_person"/>
+
+</menu>
