@@ -14,6 +14,7 @@ public class Book {
 
     }
 
+
     public Book(String uid, String id, String bookName, String bookPrice, String bookAuthor, String url, long timestamp, boolean favorite) {
         this.uid = uid;
         this.id = id;
