@@ -93,11 +93,11 @@ public class BooksFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        binding = null;
-        booksRecyclerView = null;
-        bookAdapter = null;
-        bookArrayList = null;
-        searchET = null;
+//        binding = null;
+//        booksRecyclerView = null;
+//        bookAdapter = null;
+//        bookArrayList = null;
+//        searchET = null;
     }
 
     private void loadBookList() {

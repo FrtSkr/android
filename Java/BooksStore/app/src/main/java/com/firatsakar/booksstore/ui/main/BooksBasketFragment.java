@@ -1,6 +1,7 @@
 package com.firatsakar.booksstore.ui.main;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,16 +9,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firatsakar.booksstore.Adapters.BooksBasketAdapter;
-import com.firatsakar.booksstore.R;
 import com.firatsakar.booksstore.databinding.FragmentBooksBasketBinding;
-import com.firatsakar.booksstore.databinding.FragmentBooksBinding;
 import com.firatsakar.booksstore.model.Book;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,7 +35,6 @@ public class BooksBasketFragment extends Fragment {
     private FirebaseAuth firebaseAuth;
     private ArrayList<Book> bookArrayList;
     private BooksBasketAdapter booksBasketAdapter;
-    private View satinAlBTN;
     private ProgressDialog progressDialog;
 
 
@@ -45,9 +45,12 @@ public class BooksBasketFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentBooksBasketBinding.inflate(inflater, container, false);
-        satinAlBTN = binding.satinAlBTN;
         firebaseAuth = FirebaseAuth.getInstance();
         loadBasketBooks();
+
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setTitle("Lütfen Bekleyiniz...");
+        progressDialog.setCanceledOnTouchOutside(false);
 
         return binding.getRoot();
     }
@@ -56,21 +59,13 @@ public class BooksBasketFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        satinAlBTN.setOnClickListener(new View.OnClickListener() {
+        binding.satinAlBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog = new ProgressDialog(getContext());
-                progressDialog.setTitle("Lütfen Bekleyiniz...");
-                progressDialog.setCanceledOnTouchOutside(false);
-                purchasingProcess();
+                payFromBasket(getContext());
             }
         });
 
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
     }
 
     private void loadBasketBooks() {
@@ -81,7 +76,7 @@ public class BooksBasketFragment extends Fragment {
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                           bookArrayList.clear();
+                        bookArrayList.clear();
                         for (DataSnapshot ds : snapshot.getChildren()) {
 
                             String bookId = "" + ds.child("bookId").getValue();
@@ -106,19 +101,38 @@ public class BooksBasketFragment extends Fragment {
                 });
     }
 
-
-    private void purchasingProcess()  {
-
-            progressDialog.setMessage("Satın Alma Gerçekleştiriliyor");
-            progressDialog.show();
-            progressDialog.setMessage("Allah Kaza Bela Vermesin. Hayırlı Günlerde Kullanın.");
-
-        // BURADA DATABASE BAĞLANIP KULLANICIYA AİT SEPET TEMİZLENECEK.
+    private void payFromBasket(Context context){
+        try {
+            Thread.sleep(1000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        progressDialog.setMessage("Satın Alma Gerçekleştiriliyor");
+        progressDialog.show();
+        if(firebaseAuth.getCurrentUser() == null){
+            Toast.makeText(context, "Bir hata ile karşılaşıldı", Toast.LENGTH_SHORT).show();
+        }else{
+            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users");
+            ref.child(firebaseAuth.getUid()).child("Basket")
+                    .removeValue()
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            progressDialog.setMessage("Satın Alma Gerçekleştirildi");
+                            progressDialog.show();
+                            progressDialog.dismiss();
+                            Toast.makeText(context,"Ödeme İşlemi Başarıyla Gerçekleti", Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressDialog.dismiss();
+                            Toast.makeText(context,"Ödeme işleminde bir sorun ile karşılaşıldı", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
 
     }
 
 }
-
-
-
-

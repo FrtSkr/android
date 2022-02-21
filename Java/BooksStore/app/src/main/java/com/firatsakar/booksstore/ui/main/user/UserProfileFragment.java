@@ -54,7 +54,8 @@ public class UserProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                goToUserEditFragment(view); //en son bunu koydu
+                goToUserEditFragment(view);
+
             }
         });
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="10dp">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="820dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/whigre">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/basketBookImg"
+                android:layout_width="250dp"
+                android:layout_height="275dp"
+                android:src="@drawable/ic_books"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/baskerLinearLayout"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="@id/basketBookImg"
+                app:layout_constraintStart_toEndOf="@id/basketBookImg"
+                app:layout_constraintBottom_toBottomOf="@id/basketBookImg"
+                android:layout_marginStart="48dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/basketBookName"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="@string/hint_kitap_ismi"
+                    android:textSize="42sp"/>
+
+                <TextView
+                    android:id="@+id/basketBookAuthor"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:hint="@string/hint_kitap_yazari"
+                    android:textSize="42sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/basketBookPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:hint="Kitap Fiyatı"
+                android:textSize="42sp"
+                app:layout_constraintTop_toTopOf="@id/baskerLinearLayout"
+                app:layout_constraintStart_toEndOf="@id/baskerLinearLayout"
+                app:layout_constraintBottom_toBottomOf="@id/baskerLinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/basketDeleteCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="275dp"
+            android:background="@drawable/gradiyent_button_normal"
+            android:src="@drawable/ic_white_delete" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>

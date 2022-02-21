@@ -56,11 +56,6 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.CardViewObject
     @Override
     public void onBindViewHolder(@NonNull CardViewObjects holder, int position) {
         Book _books = bookArrayList.get(position);
-
-
-
-
-
         holder.bookName.setText(_books.getBookName());
         holder.bookAuthor.setText(_books.getBookAuthor());
         holder.bookPrice.setText(_books.getBookPrice());
@@ -71,17 +66,16 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.CardViewObject
 
 
 
-        holder.books_cardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "CardView Tıklandı", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        holder.books_cardview.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(context, "CardView Tıklandı", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         holder.bookAddBasketCardViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 addToBasket(context, _books.getId());
             }
         });
