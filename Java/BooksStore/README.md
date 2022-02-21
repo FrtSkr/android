@@ -9,7 +9,7 @@
 * ViewBinding
 ---
 <p> 
-<img src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Login.gif" style="float:right" width="250" height="400">
+<img src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Login.gif?raw=true" style="float:right" width="250" height="400">
 <font size="5">Giriş Ekranı</font>
 </p>
 
