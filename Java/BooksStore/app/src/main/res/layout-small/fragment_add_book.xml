@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/addTheBookTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:text="@string/add_the_book"
+        android:background="@color/red"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/white" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintStart_toStartOf="@+id/addTheBookTextView"
+        app:layout_constraintTop_toBottomOf="@id/addTheBookTextView"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        android:src="@drawable/ic_back"/>
+
+    <LinearLayout
+        android:id="@+id/linearAddBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <EditText
+            android:id="@+id/bookName"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:hint="@string/book_name"
+            android:drawableStart="@drawable/ic_book_name"/>
+
+        <EditText
+            android:id="@+id/bookAuthor"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:hint="@string/book_author"
+            android:drawableStart="@drawable/ic_book_author"/>
+
+        <EditText
+            android:id="@+id/bookPrice"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:hint="@string/book_price"
+            android:drawableStart="@drawable/ic_book_price"/>
+
+
+        <LinearLayout
+            android:id="@+id/selectImgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_book_url"
+                android:backgroundTint="@color/white"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_image"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:backgroundTint="@color/red"
+        app:layout_constraintTop_toBottomOf="@+id/linearAddBook"
+        app:layout_constraintEnd_toEndOf="@+id/linearAddBook"
+        app:layout_constraintStart_toStartOf="@+id/linearAddBook"
+        android:layout_marginTop="25dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

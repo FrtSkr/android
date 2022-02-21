@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/books_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="@color/whigre"
+        app:strokeWidth="2dp"
+        android:backgroundTint="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/bookImg"
+                android:layout_width="50dp"
+                android:layout_height="65dp"
+                android:src="@drawable/ic_books"
+                app:layout_constraintBottom_toTopOf="@+id/bookName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/booksImg" />
+
+            <TextView
+                android:id="@+id/bookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_kitap_ismi"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/bookImg"
+                app:layout_constraintStart_toStartOf="@id/bookImg"
+                app:layout_constraintTop_toBottomOf="@id/bookImg"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bookAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_kitap_yazari"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@id/bookName"
+                app:layout_constraintStart_toStartOf="@id/bookName"
+                app:layout_constraintTop_toBottomOf="@id/bookName"
+                android:padding="3dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/bookPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/kitap_fiyati"
+                android:textSize="10sp"
+                android:padding="3dp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@id/bookAuthor"
+                app:layout_constraintEnd_toEndOf="@id/bookAuthor"
+                app:layout_constraintTop_toBottomOf="@id/bookAuthor"
+                android:textColor="@color/black"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bookAddBasketCardViewButton"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/gradiyent_button"
+        android:text="@string/sepete_ekle"
+        android:textColor="@color/white"
+        android:textSize="8dp">
+
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</LinearLayout>

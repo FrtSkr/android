@@ -21,9 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.firatsakar.booksstore.R;
 import com.firatsakar.booksstore.databinding.FragmentAddBookBinding;
-import com.firatsakar.booksstore.databinding.FragmentDashboardAdminBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RelativeL"
+    tools:context=".ui.main.user.UserEditProfileFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/_background" />
+
+
+    <View
+        android:id="@+id/viewShape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/shape_rec" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileIv"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="135dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_person"
+        app:shapeAppearance="@style/styleRoundeCornersImage" />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/profileIv"
+        android:layout_alignBottom="@id/profileIv"
+        android:layout_alignEnd="@id/profileIv"
+        android:src="@drawable/ic_profile_edit_grey" />
+
+
+    <TextView
+        android:id="@+id/editNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/full_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/editEmailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editNameTv"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hint_email"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/profileLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editEmailTv"
+       android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        android:padding="5dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="450dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="25dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:drawableTint="@color/brown_700"
+                android:drawableStart="@drawable/ic_person"
+                android:hint="@string/kullanici_adi" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="450dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="25dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:drawableTint="@color/brown_700"
+                android:drawableStart="@drawable/ic_person"
+                android:hint="@string/kullanici_soyadi" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="450dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="25dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_email"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:hint="@string/kullanici_email"
+                android:drawableTint="@color/brown_700"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="450dp"
+            android:layout_height="65dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userAdress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_location"
+                android:textSize="20sp"
+                android:drawableTint="@color/brown_700"
+                android:gravity="center"
+                android:hint="@string/kullanici_adres" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/successImgBTN"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/profileLinearLayout"
+       android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/green"
+        android:gravity="center"
+        app:icon="@drawable/ic_success"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        android:layout_marginEnd="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backImgBTN"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignStart="@id/viewShape"
+        android:layout_alignTop="@id/viewShape"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:src="@drawable/back"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+
+</RelativeLayout>

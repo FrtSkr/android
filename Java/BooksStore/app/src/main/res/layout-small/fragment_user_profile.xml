@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RelativeL"
+    tools:context=".ui.main.user.UserProfileFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/_background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"/>
+
+
+    <View
+        android:id="@+id/viewShape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_rec" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileIv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        app:shapeAppearance="@style/styleRoundeCornersImage"
+        android:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileIv"
+        android:layout_marginTop="8dp"
+        android:text="@string/full_name"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTv"
+        android:text="@string/hint_email"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="6sp" />
+
+
+
+        <ImageButton
+            android:id="@+id/profileEditIB"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_edit_10"
+            android:layout_marginStart="25sp"
+            android:layout_alignStart="@id/viewShape"
+            android:layout_alignTop="@id/viewShape"
+            android:layout_marginTop="25dp" />
+
+
+
+        <ImageButton
+            android:id="@+id/exitIB"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_power_10"
+            android:backgroundTint="@color/white"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_alignEnd="@id/viewShape"
+            android:layout_alignTop="@id/viewShape"/>
+
+
+
+
+
+
+</RelativeLayout>
