@@ -11,7 +11,7 @@
         android:id="@+id/backButton"
         android:layout_width="75dp"
         android:layout_height="100dp"
-        android:src="@drawable/ic_back_button_50"
+        android:src="@drawable/back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/material_on_background_disabled" />
@@ -88,7 +88,6 @@
             android:layout_height="wrap_content"
             android:background="@drawable/gradiyent_button"
             android:text="@string/kayit_ol"
-            android:textColor="@color/white"
             android:layout_marginTop="35dp"/>
 
 

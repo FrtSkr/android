@@ -1,8 +1,9 @@
 <resources>
-
     <string name="app_name">BooksStore</string>
     <string name="kitaplar">Kitaplar</string>
     <string name="sepet">Sepet</string>
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="kulalnici_ayarlari">Kullanıcı Ayarları</string>
     <string name="kullanici_bilgileri">Kullanıcı Bilgileri</string>
@@ -29,18 +30,11 @@
     <string name="book_price">Book Price</string>
     <string name="select_image">Select Image</string>
     <string name="profile">Profil</string>
-    <string name="arama_kriteri">Yazar Adı, Kitap Adı…</string>
+    <string name="arama_kriteri">Yazar Adı, Kitap Adı...</string>
     <string name="satin_al">Satın Al</string>
     <string name="kullanici_adres">Kullanıcı Adres</string>
     <string name="full_name">Full Name</string>
     <string name="hint_email">abc@example.com</string>
     <string name="user_pass">Şifre</string>
     <string name="again_user_pass">Tekrar Şifre</string>
-
-
-    <string name="title_activity_splash">Splash</string>
-    <string name="mail_adresiniz">Mail Adresi</string>
-    <string name="sifre_hint">Şifre</string>
-    <string name="book_store">Book Store</string>
-
 </resources>

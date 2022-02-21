@@ -76,11 +76,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-//        binding = null;
-//        bottomNavigationView = null;
-//        fragment = null;
-//        frameLayout = null;
-//        anim = null;
+        binding = null;
+        bottomNavigationView = null;
+        fragment = null;
+        frameLayout = null;
+        anim = null;
     }
 
 

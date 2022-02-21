@@ -13,8 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
-        <item name="windowActionBar">false</item>
-        // action bar kapatıldı
+        <item name="windowActionBar">false</item> // action bar kapatıldı
         <item name="windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
     </style>
@@ -25,14 +24,5 @@
         <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
         <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
-
-    <style name="Theme.BooksStore.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.BooksStore.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.BooksStore.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
