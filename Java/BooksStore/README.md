@@ -19,7 +19,7 @@
 
 
 <p align="center" margin="15" padding="25"> 
-<img  src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Basket.gif?raw=true" margin="10" width="300" height="600" />
+<img  src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Basket.gif?raw=true" width="300" height="600" />
 
 <img src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Profile.gif?raw=true" width="300" height="600"  />
 </p>
