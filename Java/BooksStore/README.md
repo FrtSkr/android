@@ -11,8 +11,8 @@
 
 ---
 
-<p align="center" margin="15" padding="25">
-<img src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Login.gif?raw=true" width="300" height="600" />
+<p align="center">
+<img src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Login.gif?raw=true" width=%50 height=%75 />
 
 <img src="https://github.com/FrtSkr/Android/blob/main/Java/GIF/Home.gif?raw=true" width="300" height="600" />
 </p>
